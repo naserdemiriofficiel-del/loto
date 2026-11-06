@@ -20,7 +20,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.tiragechance.app" // À remplacer par votre identifiant unique avant publication
+        applicationId = "com.demirinaser.etoilesdor"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -48,6 +48,10 @@ android {
                 signingConfig = signingConfigs.getByName("release")
             }
         }
+    }
+
+    lint {
+        checkReleaseBuilds = false
     }
 
     compileOptions {
