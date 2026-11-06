@@ -176,6 +176,7 @@ class MainActivity : Activity() {
                 cornerRadius = dp(22).toFloat()
             }
             setPadding(dp(16), dp(20), dp(16), dp(24))
+            clipChildren = false
             elevation = dp(4).toFloat()
         }
 
@@ -238,13 +239,16 @@ class MainActivity : Activity() {
             }
         }
         layoutParams = LinearLayout.LayoutParams(size, size).apply {
-            setMargins(dp(4), dp(10), dp(4), 0)
+            setMargins(dp(4), 0, dp(4), 0)
         }
     }
 
     private fun row() = LinearLayout(this).apply {
         orientation = LinearLayout.HORIZONTAL
         gravity = Gravity.CENTER
+        setPadding(0, dp(10), 0, 0)
+        clipChildren = false
+        clipToPadding = false
     }
 
     private fun label(
